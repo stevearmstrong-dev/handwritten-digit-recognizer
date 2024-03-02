@@ -74,4 +74,4 @@ Opportunities for future improvements include refining the model to enhance accu
 For any questions or discussions, feel free to contact me at [steve@stevearmstrong.org](mailto:steve@stevearmstrong.org).
 
 ### License
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/W0474997SteveArmstrong/cardiovascular-disease-risk-prediction/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/stevearmstrong-dev/handwritten-digit-recognizer/blob/main/LICENSE) file for details.
