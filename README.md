@@ -1,4 +1,4 @@
-# Measuring the Performance of a Handwritten Digit Classifier
+# Creating a Handwritten Digit Recognizer using a Deep Neural Network and measuring its accuracy.
 
 ### Introduction
 This project focuses on evaluating the accuracy of an image classification model. It involves comparing the model's predictions against the actual labels to determine accuracy.
