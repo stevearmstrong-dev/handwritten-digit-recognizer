@@ -1,11 +1,11 @@
 # Creating a Handwritten Digit Recognizer using a Deep Neural Network and measuring its accuracy.
 
 ### Introduction
-This project focuses on evaluating the accuracy of an image classification model. It involves comparing the model's predictions against the actual labels to determine accuracy.
+This project focuses on evaluating the accuracy of an image classification model. It involves comparing the model's predictions against the actual labels to determine accuracy. My focus is on developing a model that reliably classifies handwritten digits, contributing to advancements in computer vision applications.
 
 ### Motivation
 
-Image classification is a fundamental task in computer vision, with applications in areas such as object detection, facial recognition, and medical imaging. Developing accurate image classification models is crucial for the reliable performance of these applications. This project aims to contribute to the field of image classification by evaluating the accuracy of a trained model and identifying potential areas for improvement.
+Image classification serves as a cornerstone in computer vision, underpinning applications from object detection and facial recognition to medical imaging. The goal of this project is to develop a model with high accuracy for these critical applications, thereby supporting the field of image classification.
 
 ### Technologies Used
 * numpy: To deal with the number lists in the project.
@@ -20,10 +20,12 @@ Image classification is a fundamental task in computer vision, with applications
 
 ### Dataset
 
-The dataset used in this project is the MNIST dataset. The MNIST dataset is a standard dataset for handwritten digit recognition. It consists of 70,000 grayscale images of handwritten digits. The images are divided into a training set of 60,000 images and a test set of 10,000 images. The training set is used to train the model, and the test set is used to evaluate the accuracy of the trained model.
+The dataset used in this project is the MNIST dataset, a standard dataset in handwritten digit recognition comprising 70,000 grayscale images of digits (0-9). It is split into 60,000 training images and 10,000 testing images, enabling us to train and evaluate our model effectively.
+
+![image](https://github.com/stevearmstrong-dev/handwritten-digit-recognizer/assets/113034949/f7ca4e29-b60c-4f24-b505-a00043ffc5c9)
 
 
-### Key Concepts and Techniques:
+### Key Concepts and Techniques
 * DataLoader: Efficiently handles datasets and provides batches of data.
 * Transforms: Preprocess and prepare data for training.
 * Sequential Model: Simplifies model construction in PyTorch.
@@ -35,7 +37,7 @@ The dataset used in this project is the MNIST dataset. The MNIST dataset is a st
 
 ### Model Architecture
 
-The neural network model defined for this task employs a simple yet effective architecture suitable for learning from the MNIST dataset. The key components of this architecture include:
+The model features an input layer that flattens 28x28 images into 784-element vectors, two hidden layers with ReLU activation (sizes 64 and 32), and an output layer with 10 units for class probabilities.
 
 * Input Layer: This layer flattens the input images into one-dimensional vectors. Since each MNIST image is 28x28 pixels, the resulting input size for each image is 784 (28*28). This transformation is necessary because the neural network operates on vectors of numbers rather than two-dimensional images.
 
@@ -59,15 +61,39 @@ The training process is conducted over multiple epochs, where one epoch represen
 
 Throughout the training, the model's performance is monitored by calculating the loss and, optionally, other metrics such as accuracy. These metrics provide insight into how well the model is learning and can be used to make adjustments to the training process, such as tuning hyperparameters or modifying the model architecture.
 
-### Summary statistics
-print(f"Total images tested: {totalCount}")
-print(f"Accurate predictions: {accurateCount}")
-print(f"Accuracy percentage: {(accurateCount / totalCount) * 100:.2f}%")
+<img width="489" alt="Screenshot 2024-03-02 at 6 36 21 PM" src="https://github.com/stevearmstrong-dev/handwritten-digit-recognizer/assets/113034949/a264c20c-9392-449e-954c-109a121dd500">
 
-### Results
+
+### Code Overview
+
+#### Setup and Preprocessing
+* Importing Libraries: Essential libraries such as torch, torchvision, numpy, and matplotlib.pyplot are imported to provide the necessary functionalities for data handling, neural network construction, and visualization.
+* Data Transformation: The MNIST dataset images are transformed into normalized tensors using transforms.Compose, ensuring they are in the correct format for model input.
+#### Data Loading
+* Dataset Loading: The MNIST dataset is loaded using datasets.MNIST from torchvision, specifying paths for training and testing datasets.
+* DataLoader Use: DataLoader objects for both training and testing sets are created to efficiently manage data batching, shuffling, and iteration during model training and evaluation.
+#### Model Definition
+* Model Architecture: A Sequential model is defined, incorporating two hidden layers with ReLU activation functions and an output layer designed for classification across ten digit classes.
+* Loss Function and Optimizer: Cross-Entropy Loss is chosen for evaluating model predictions, and Stochastic Gradient Descent (SGD) serves as the optimizer, guiding the model's parameter updates.
+#### Training Loop
+* Batch Processing: For each epoch, the training loop processes batches of images and labels, executing forward propagation, loss calculation, and backward propagation.
+* Parameter Updates: Within each iteration, model parameters are updated based on the computed gradients to minimize the loss function.
+#### Evaluation and Results
+* Testing: After training, the model's performance is assessed on the test dataset, comparing predicted labels against actual labels to calculate accuracy.
+* Summary Statistics: Accuracy statistics are printed, providing insight into the model's generalization ability on unseen data.
+#### Utilities
+* Prediction Function: A utility function, get_predicted_label, is provided to facilitate the prediction of digit classes for individual images, demonstrating the model's practical application.
+#### Visualization
+* Sample Visualizations: Code snippets for visualizing sample images from the dataset, along with their predicted and actual labels, are included, offering a qualitative assessment of the model's performance.
+
+#### Summary statistics
+
+<img width="567" alt="Screenshot 2024-03-02 at 6 34 53 PM" src="https://github.com/stevearmstrong-dev/handwritten-digit-recognizer/assets/113034949/4ffeb20d-5fbc-402f-ae99-853a513e075d">
+
+#### Results
 The script outputs the predicted and actual labels for each image. Upon completion, it displays the total number of images tested, the number of accurate predictions, and the calculated accuracy percentage.
 
-### Future Work
+#### Future Work
 Opportunities for future improvements include refining the model to enhance accuracy further and expanding the test dataset for more comprehensive testing.
 
 ## Contact
