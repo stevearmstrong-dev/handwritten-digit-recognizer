@@ -1,7 +1,7 @@
-# Creating a Handwritten Digit Recognizer using a Deep Neural Network and measuring its accuracy.
+# Creating a Handwritten Digit Recognizer using a Deep Neural Network and measuring its accuracy with application in Medical Imaging
 
 ### Introduction
-This project focuses on evaluating the accuracy of an image classification model. It involves comparing the model's predictions against the actual labels to determine accuracy. My focus is on developing a model that reliably classifies handwritten digits, contributing to advancements in computer vision applications.
+This project focuses on evaluating the accuracy of an image classification model. It involves comparing the model's predictions against the actual labels to determine accuracy. My focus is on developing a model that reliably classifies handwritten digits, contributing to advancements in computer vision applications like medical imaging.
 
 ### Motivation
 
