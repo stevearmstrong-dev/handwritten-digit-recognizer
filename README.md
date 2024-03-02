@@ -86,11 +86,10 @@ Throughout the training, the model's performance is monitored by calculating the
 #### Visualization
 * Sample Visualizations: Code snippets for visualizing sample images from the dataset, along with their predicted and actual labels, are included, offering a qualitative assessment of the model's performance.
 
-#### Summary statistics
+## Results
 
 <img width="567" alt="Screenshot 2024-03-02 at 6 34 53 PM" src="https://github.com/stevearmstrong-dev/handwritten-digit-recognizer/assets/113034949/4ffeb20d-5fbc-402f-ae99-853a513e075d">
 
-#### Results
 The script outputs the predicted and actual labels for each image. Upon completion, it displays the total number of images tested, the number of accurate predictions, and the calculated accuracy percentage.
 
 ## How to Use
