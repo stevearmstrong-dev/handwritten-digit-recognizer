@@ -93,6 +93,44 @@ Throughout the training, the model's performance is monitored by calculating the
 #### Results
 The script outputs the predicted and actual labels for each image. Upon completion, it displays the total number of images tested, the number of accurate predictions, and the calculated accuracy percentage.
 
+## How to Use
+
+This project is designed to be accessible and straightforward to run using Jupyter Notebooks, a popular tool in data science for interactive computing.
+
+### Prerequisites
+
+To run the `handwritten_digit_recognizer.ipynb` notebook, you'll need to have Python installed on your system along with Jupyter Notebook or JupyterLab. It's also recommended to use a virtual environment for Python projects to manage dependencies effectively.
+
+### Installation
+
+1. **Clone the Repository**: Start by cloning this repository to your local machine.
+   ```bash
+   git clone https://github.com/stevearmstrong-dev/handwritten-digit-recognizer.git
+   cd handwritten-digit-recognizer
+
+2. **Create a Virtual Environment (Optional but recommended)**:
+   * For **conda** users:
+     ``` bash
+     conda create --name handwritten-digit-recognizer python=3.8
+     conda activate handwritten-digit-recognizer
+   * For **venv** users:
+     ```bash
+     python3 -m venv handwritten-digit-recognizer
+     source handwritten-digit-recognizer/bin/activate  # On Windows use `handwritten-digit-recognizer\Scripts\activate`
+
+3. **Install Required Packages**
+   ```bash
+   pip install numpy matplotlib torch torchvision
+
+4. **Running the Notebook**
+   * Navigate to the Notebook Directory: Change directory to the `notebooks` folder.
+     ```bash
+     cd notebooks
+   * Launch Jupyter Notebook
+   ```bash
+    jupyter notebook
+5. **Open `handwritten-digit-recognizer.ipynb` in the Jupyter Notebook interface** and follow the instructions within the notebook to run the analyses.
+
 #### Future Work
 Opportunities for future improvements include refining the model to enhance accuracy further and expanding the test dataset for more comprehensive testing.
 
